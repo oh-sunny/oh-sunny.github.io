@@ -1,0 +1,28 @@
+title: "oh-sunny의 기록"
+description: "배운 것과 오래 남은 생각을 기록합니다."
+url: "https://oh-sunny.github.io"
+baseurl: ""
+lang: ko
+timezone: Asia/Seoul
+permalink: /:year/:month/:day/:title/
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+exclude:
+  - README.md
+  - tests
+  - Gemfile
+  - Gemfile.lock
+  - scripts
+  - post-template.md.txt
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+google_analytics: ""

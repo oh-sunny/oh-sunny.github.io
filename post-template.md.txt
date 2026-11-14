@@ -1,0 +1,14 @@
+---
+title: "여기에 글 제목"
+date: YYYY-MM-DD 12:00:00 +0900
+topic: "생각"
+description: "목록에 보일 한두 문장"
+---
+
+여기부터 본문을 씁니다.
+
+## 소제목
+
+**강조할 문장**
+
+![사진 설명](/assets/images/my-photo.jpg)

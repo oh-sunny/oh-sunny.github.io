@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<section class="page-heading"><p class="eyebrow">NOTES & THOUGHTS</p><h1>기록해 두고 싶은 것들<span class="dot">.</span></h1><p class="lead">배우며 알게 된 것, 읽고 보고 떠오른 생각.<br>아직 결론이 나지 않은 이야기도 여기에.</p></section>
+<section aria-label="기록 목록">
+<div class="toolbar"><div class="filters" role="group" aria-label="주제별 보기"><button type="button" data-category="" aria-pressed="true">전체</button><button type="button" data-category="생각" aria-pressed="false">생각</button><button type="button" data-category="AI 공부" aria-pressed="false">AI 공부</button><button type="button" data-category="커리어" aria-pressed="false">커리어</button><button type="button" data-category="책·영화" aria-pressed="false">책·영화</button></div><label class="search"><span class="sr-only">글 검색</span><input id="search" type="search" placeholder="기록 검색" autocomplete="off"></label></div>
+<div class="list-meta"><h2 id="list-title">모든 기록</h2><span id="result-count" aria-live="polite">{{ site.posts.size }}개의 글</span></div>
+<div id="posts">{% for post in site.posts %}<article class="post-row" data-category="{{ post.topic | default: '생각' | escape }}" data-search="{{ post.title | append: ' ' | append: post.description | append: ' ' | append: post.content | strip_html | escape }}"><div class="post-meta"><span>{{ post.topic | default: '생각' }}</span><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time></div><h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}<span aria-hidden="true">↗</span></a></h3><p>{{ post.description | default: post.excerpt | strip_html | truncate: 150 }}</p></article>{% endfor %}</div>
+<p id="empty" class="empty" hidden>아직 이 조건에 맞는 기록이 없어요.<br><span>다른 주제를 고르거나 검색어를 바꿔보세요.</span></p>
+<noscript><p>주제 필터와 검색은 자바스크립트를 켜면 사용할 수 있어요. 위 목록에서 모든 글을 읽을 수 있습니다.</p></noscript>
+</section>
+<script src="{{ '/assets/filter.js' | relative_url }}"></script><script src="{{ '/assets/list.js' | relative_url }}" defer></script>

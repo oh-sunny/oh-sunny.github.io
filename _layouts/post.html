@@ -1,0 +1,5 @@
+---
+layout: default
+---
+<article class="reading"><a class="back-link" href="{{ '/' | relative_url }}">← 모든 기록</a><header class="article-heading"><p class="eyebrow">{{ page.topic | default: '생각' }}</p><h1>{{ page.title | escape }}</h1><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y년 %m월 %d일' }}</time>{% if page.description %}<p class="article-description">{{ page.description }}</p>{% endif %}</header><details class="toc"><summary>이 글의 목차</summary><nav id="toc-list" aria-label="글 목차"></nav></details><div class="prose" id="article-body">{{ content }}</div><div class="article-end"><span>여기까지, 하나의 기록.</span><a href="{{ '/' | relative_url }}">다른 기록 읽기 ↗</a></div></article>
+<script src="{{ '/assets/post.js' | relative_url }}" defer></script>
