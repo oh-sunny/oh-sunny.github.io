@@ -20,9 +20,7 @@
 <div class="shell">
 <header class="sidebar">
 <a class="wordmark" href="{{ '/' | relative_url }}">oh-sunny<span class="dot">.</span></a>
-<p class="site-note">배운 것과<br>오래 남은 생각들.</p>
-<nav aria-label="메인 메뉴"><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>모든 기록 <span>↗</span></a><a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}aria-current="page"{% endif %}>이 공간에 대해</a><a href="{{ '/feed.xml' | relative_url }}">RSS 구독</a></nav>
-<p class="side-bottom">조금씩, 내 속도로.</p>
+<nav aria-label="메인 메뉴"><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>전체 글</a></nav>
 </header>
 <main id="main">{{ content }}</main>
 <footer><span>© {{ 'now' | date: '%Y' }} oh-sunny. All rights reserved.</span><a href="{{ '/privacy/' | relative_url }}">방문 통계 안내</a></footer>
